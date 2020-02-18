@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import Button from '@material-ui/core/Button';
+import Input from '@material-ui/core/Input';
 
 export function TodoForm (props) {
     const [form, setForm] = useState('')
@@ -9,7 +11,7 @@ export function TodoForm (props) {
         props.addTodo(form)
         setForm('')
     }}>
-        <input 
+        <Input
             name='todo'
             placeholder='Add Todo'
             value={form}
@@ -17,7 +19,8 @@ export function TodoForm (props) {
                 setForm(event.target.value)
             }}
         />
-        <button type='submit'>Add Todo</button>
+        <Button variant="contained" color="Primary" type="submit">Add Task</Button>
+        {/* <button type='submit'>Add Todo</button> */}
     </form>
    )
 }

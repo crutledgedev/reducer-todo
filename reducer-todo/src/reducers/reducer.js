@@ -1,5 +1,5 @@
 export const initialState = [{
-    todo: '',
+    todo: 'Some kind of thing because i said so',
     completed: false,
     id: Math.random()
 }]
